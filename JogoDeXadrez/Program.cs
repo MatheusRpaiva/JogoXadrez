@@ -1,4 +1,5 @@
 ﻿using System;
+using Tabuleiro;
 
 namespace JogoDeXadrez
 {
@@ -6,7 +7,12 @@ namespace JogoDeXadrez
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            Posicao p = new Posicao(3, 4);
+
+            Console.WriteLine("Posição : " + p);
+
+            Console.ReadLine();
         }
     }
 }
