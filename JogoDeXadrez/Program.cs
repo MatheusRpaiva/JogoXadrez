@@ -9,19 +9,26 @@ namespace JogoDeXadrez
         static void Main(string[] args)
         {
 
-            //Posicao p = new Posicao(3, 4);
-
-            //Console.WriteLine("Posição : " + p);
+        
             try
             {
-                Tabuleiro tab = new Tabuleiro(8, 8);
+                PartidaDeXadrez partida = new PartidaDeXadrez();
 
-                tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
-                tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 2));
-                tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(0, 2));
-                tab.colocarPeca(new Torre(tab, Cor.Branca), new Posicao(3, 5));
-                Tela.imprimirTabuleiro(tab);
+                while (!partida.terminada)
+                {
+                    Console.Clear();
 
+
+                    Tela.imprimirTabuleiro(partida.tab);
+                    Console.WriteLine();
+
+                    Console.Write("Origem: ");
+                    Posicao origem = Tela.LerPosicaoXadrez().toPosicao();
+                    Console.Write("Destino: ");
+                    Posicao destino = Tela.LerPosicaoXadrez().toPosicao();
+
+                    partida.executaMovimento(origem, destino);
+                }
 
                 Console.ReadLine();
             }
