@@ -19,8 +19,6 @@ namespace JogoDeXadrez
                     try
                     {
                         Console.Clear();
-
-
                         Tela.imprimirPartida(partida);
                         Console.WriteLine();
 
@@ -42,8 +40,13 @@ namespace JogoDeXadrez
                         Console.WriteLine(e.Message);
                         Console.ReadLine();
                     }
+
                 }
+
+                Console.Clear();
+                Tela.imprimirPartida(partida);
                 Console.ReadLine();
+
             }
             catch (TabuleiroException e)
             {
