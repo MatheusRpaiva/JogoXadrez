@@ -16,6 +16,12 @@ namespace tabuleiro
             Coluna = coluna;
         }
 
+        public void definirValores(int linha, int coluna)
+        {
+            Linha = linha;
+            Coluna = coluna;
+        }
+
         public override string ToString()
         {
             return String.Format("{0}, {1}", Linha, Coluna);
