@@ -21,11 +21,7 @@ namespace JogoDeXadrez
                         Console.Clear();
 
 
-                        Tela.imprimirTabuleiro(partida.tab);
-                        Console.WriteLine();
-
-                        Console.WriteLine("Turno: " + partida.turno);
-                        Console.WriteLine("Aguardando jodada das peça: " + partida.jogadorAtual);
+                        Tela.imprimirPartida(partida);
                         Console.WriteLine();
 
                         Console.Write("Origem: ");
